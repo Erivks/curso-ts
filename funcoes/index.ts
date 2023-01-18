@@ -77,7 +77,7 @@ function error(): never {
 }
 
 // 9 - rest operator
-function sum(...n: number[]): number {
+function sumFunc(...n: number[]): number {
     return n.reduce((num, sum) => sum + num);
 }
 

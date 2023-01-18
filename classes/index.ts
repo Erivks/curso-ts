@@ -1,10 +1,10 @@
 // 1 - propriedades
-class User {
+class UserTest {
     name!: string
     age!: number
 }
 
-const testUser = new User();
+const testUser = new UserTest();
 
 testUser.name = "Erick"
 
@@ -80,9 +80,9 @@ class testGetters {
     }
 }
 
-const test = new testGetters("Erick", "Santos");
+const testVar = new testGetters("Erick", "Santos");
 
-console.log(test.fullName);
+console.log(testVar.fullName);
 
 // 7 - setters
 class Coords {
