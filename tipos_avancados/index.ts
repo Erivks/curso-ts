@@ -63,3 +63,12 @@ function showID(id: ID) {
 showID(1);
 showID("10");
 
+
+const n1: number = 10;
+
+const n1String = n1.toString();
+
+const show: string = `Esse é o número: ${n1String}`;
+
+console.log(print);
+
