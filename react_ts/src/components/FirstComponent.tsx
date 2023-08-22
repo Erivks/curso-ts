@@ -1,11 +1,19 @@
 //3 - Componente
-import React, {ReactElement} from "react";
+import React, {ReactElement, useContext} from "react";
+import App, {AppContext} from "../App";
 
 function FirstComponent(): ReactElement {
+    const details = useContext(AppContext);
+
     return (
-        <div>
-            <h1>Hello!</h1>
-        </div>
+        <>
+            {details && (
+                <div>
+                    <h2>{details.language}</h2>
+                    <p>{details.projects}</p>
+                </div>
+            )}
+        </>
     );
 }
 
