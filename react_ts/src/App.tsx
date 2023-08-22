@@ -3,7 +3,7 @@ import React from 'react';
 import FirstComponent from './components/FirstComponent';
 
 // 5 - Desestruturando props
-import SecondComponent from './components/SecondComponent';
+import SecondComponent, {Category} from './components/SecondComponent';
 
 function App() {
 
@@ -23,7 +23,13 @@ function App() {
       {isWorking && <p>Está trabalhando</p>}
       <h2>{userGreeting(name)}</h2>
       <FirstComponent />
-      <SecondComponent title="Segundo" content="Segundo componente" commentsQty={10} tags={["ts", "js"]}/>
+      <SecondComponent 
+        title="Segundo" 
+        content="Segundo componente" 
+        commentsQty={10} 
+        tags={["ts", "js"]}
+        category={Category.TS}
+      />
     </div>
   );
 }
