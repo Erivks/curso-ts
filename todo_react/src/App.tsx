@@ -15,6 +15,7 @@ import { ITask } from './interfaces/Task';
 
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
+  const [taskToUpdate, setTaskToUpdate] = useState<ITask | null>(null);
 
   const deleteTask = (id: number) => {
     setTaskList(
@@ -33,13 +34,14 @@ function App() {
     }
   } 
 
-  const editTask = (): void => {
+  const editTask = (task: ITask): void => {
     hideOrShowModal(true);
+    setTaskToUpdate(task);
   }
 
   return (
     <div>
-      <Modal children={ <TaskForm btnText="Editar" taskList={taskList}/>}/>
+      <Modal children={ <TaskForm btnText="Editar" taskList={taskList} task={taskToUpdate}/>}/>
       <Header />
       <main className={styles.main}>
         <div>Conteudo..</div>
